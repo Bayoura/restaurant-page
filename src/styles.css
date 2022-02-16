@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+body {
+    color: white;
+    background-image: url(./images/rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */
+    background-color: hsl(25deg 32% 12%); /* background color that will be displayed while background image is loading */
+    display: grid;
+    grid-template-rows: 2fr auto;
+    justify-content: center;
+    min-height: 100vh;
+} 
+
+#content {
+    max-width: 85%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+
+
+@media (max-width: 767px) {
+    body {
+        background-image: url(./images/rsz_1rsz_1rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
+    }
+}
