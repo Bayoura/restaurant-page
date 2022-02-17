@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 1.2rem;
 }
 
 body {
@@ -14,21 +13,27 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */
-    background-color: hsl(25deg 32% 12%); /* background color that will be displayed while background image is loading */
-    display: grid;
-    grid-template-rows: 2fr auto;
+    background-color: hsl(23deg 27% 31%); /* background color that will be displayed while background image is loading */
+    display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; 
+    min-width: 100vw;
 } 
 
 #content {
+    background-color: hsl(0deg 100% 100% / 60%);
+    width: 1000px;
     max-width: 85%;
+    position: relative;
 }
 
 header {
+    background-color: grey;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 20px;
+    font-size: 1.5rem;
 }
 
 .menu ul {
@@ -40,10 +45,72 @@ header {
     list-style: none;
 }
 
+.nav-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
 
+/* underline hover animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-in;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.box {
+    background-color: hsl(0deg 100% 100% / 80%);
+    color: black;
+    width: 80%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* footer {
+    text-align: center;
+    font-weight: 300;
+}
+
+.attribution {
+    padding: 20px 0 10px 0;
+    font-size: 0.875rem;
+}
+
+
+.credit,
+.credit a {
+    font-size: 0.625rem; 
+    padding: 5px;
+}
+
+footer a {
+    font-style: italic;
+    font-weight: 400;
+    color: #cddef8;
+} */
 
 @media (max-width: 767px) {
     body {
         background-image: url(./images/rsz_1rsz_1rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
+    }
+    #content {
+        max-width: 70%;
     }
 }
