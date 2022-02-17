@@ -4,16 +4,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--eggshell);
+}
+
+:root {
+    --green: hsl(103deg 13% 39%);
+    --green-80-transp: hsl(103deg 13% 39% / 80%);
+    --green-90-transp: hsl(103deg 13% 39% / 90%);
+    --eggshell: hsl(23deg 87% 94%);
+    --orange: hsl(23deg 68% 75%);
+    --brown: hsl(23deg 27% 31%);
 }
 
 body {
-    color: white;
     background-image: url(./images/rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* Background image is fixed in the viewport so that it doesn’t move when the content’s height is greater than the image’s height */
-    background-color: hsl(23deg 27% 31%); /* background color that will be displayed while background image is loading */
+    background-color: var(--brown); /* background color that will be displayed while background image is loading */
     display: flex;
     justify-content: center;
     min-height: 100vh; 
@@ -22,18 +31,31 @@ body {
 
 #content {
     background-color: hsl(0deg 100% 100% / 60%);
-    width: 1000px;
+    width: 1200px;
     max-width: 85%;
     position: relative;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+}
+
+h1 {
+    color: var(--orange);
+    font-size: 4rem;
+}
+
 header {
-    background-color: grey;
+    background-color: var(--green);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px;
-    font-size: 1.5rem;
 }
 
 .menu ul {
@@ -43,10 +65,10 @@ header {
 
 .menu ul li {
     list-style: none;
+    font-size: 1.6rem;
 }
 
 .nav-link {
-    color: white;
     text-decoration: none;
     position: relative;
 }
@@ -60,7 +82,7 @@ header {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: white;
+    background-color: var(--eggshell);
     transform-origin: bottom right;
     transition: transform 0.25s ease-in;
 }
@@ -71,16 +93,25 @@ header {
 }
 
 .box {
-    background-color: hsl(0deg 100% 100% / 80%);
-    color: black;
+    background-color:var(--green-80-transp);
+    border: 6px solid var(--green-90-transp);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
     width: 80%;
-    height: 100%;
     max-width: 700px;
-    max-height: 500px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    margin: 100px auto;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.box p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
 }
 
 /* footer {
