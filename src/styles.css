@@ -52,13 +52,13 @@ body {
 
 /* -------------------NAVBAR--------------------- */
 
-.logo {
+.logo-container {
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
-.logo img {
+.logo-container img {
     height: 80px;
 }
 
