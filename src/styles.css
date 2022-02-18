@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Gideon Roman';
+    src: url('./fonts/GideonRoman-Regular.ttf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Redressed';
+    src: url('./fonts/Redressed-Regular.ttf') format('truetype'); 
+}
+
 *,
 *::after,
 *::before {
@@ -5,7 +14,7 @@
     margin: 0;
     padding: 0;
     color: var(--eggshell);
-    font-family: 'Gideon Roman', cursive;
+    font-family: 'Gideon Roman', Helvetica, cursive;
 }
 
 *:focus {
@@ -55,7 +64,7 @@ body {
 
 h1 {
     color: var(--orange);
-    font-family: 'Redressed', cursive;
+    font-family: 'Redressed', Helvetica, cursive;
     font-size: 4rem;
 }
 
@@ -133,6 +142,7 @@ h2 {
     color: hsl(103deg 13% 28%);
     cursor: pointer;
     font-size: 1.7rem;
+    font-weight: bold;
     margin-bottom: 25px;
     padding: 15px 10px;
     transition: 300ms ease-in;
