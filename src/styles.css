@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     color: var(--eggshell);
+    font-family: 'Gideon Roman', cursive;
 }
 
 *:focus {
@@ -54,6 +55,7 @@ body {
 
 h1 {
     color: var(--orange);
+    font-family: 'Redressed', cursive;
     font-size: 4rem;
 }
 
