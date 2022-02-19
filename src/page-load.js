@@ -17,7 +17,8 @@ function createPage() {
     // box content
     const welcomeBox_parent = document.createElement('div');
     const heading2 = document.createElement('h2');
-    const paragraph = document.createElement('p');
+    const paragraphOne = document.createElement('p');
+    const paragraphTwo = document.createElement('p');
     const button = document.createElement('button');
 
     // define elements
@@ -32,7 +33,8 @@ function createPage() {
     linkThree.innerText = 'Contact';
     linkThree.setAttribute('href', '#');
     heading2.innerText = 'Welcome, weary traveller!';
-    paragraph.innerText = 'Whatever ailment plagues you, be assured, we got a cure. Our treatments range from medicinal teas over healing herbs and soothing ointments to magic potions. Whether you suffer from a headache, a flesh wound or food poisoning — we have the remedy to provide you with sweet relief.';
+    paragraphOne.innerText = 'Whatever ailment plagues you, be assured, we got a cure. Our treatments range from medicinal teas over healing herbs and soothing ointments to magic potions.';
+    paragraphTwo.innerText = 'Whether you suffer from a headache, a flesh wound or food poisoning — we have the remedy to provide you with sweet relief.';
     button.innerText = 'Look at what we have to offer';
     button.type = 'button';
 
@@ -52,7 +54,7 @@ function createPage() {
     ul_parent.append(liOne, liTwo, liThree);
     nav_parent.append(ul_parent);
     header_parent.append(logoContainer_parent, nav_parent);
-    welcomeBox_parent.append(heading2, paragraph, button);
+    welcomeBox_parent.append(heading2, paragraphOne, paragraphTwo, button);
     
     
     content_parent.append(header_parent, welcomeBox_parent);
