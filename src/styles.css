@@ -31,7 +31,7 @@
 }
 
 body {
-    background-image: url(./images/rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
+    background-image: url(./images/background-img-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -47,7 +47,6 @@ body {
     background-color: hsl(0deg 100% 100% / 60%);
     width: 1200px;
     max-width: 85%;
-    position: relative;
 }
 
 /* -------------------NAVBAR--------------------- */
@@ -176,11 +175,50 @@ footer a {
     color: #cddef8;
 } */
 
+@media (max-width: 991px) {
+    header {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 767px) {
     body {
-        background-image: url(./images/rsz_1rsz_1rsz_annie-spratt-ptdxmygy418-unsplash.jpg);
+        background-image: url(./images/background-img-mobile.jpg);
     }
-    #content {
-        max-width: 70%;
+    header {
+        padding: 15px 25px;
+    }
+    .logo-container {
+        flex-direction: column;
+    }
+    .logo-container img {
+        height: 50px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu ul li {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .welcome-box {
+        padding: 10px;
+        margin: 40px auto;
+        width: 90%;
+    }
+    .welcome-box p {
+        font-size: 1.3rem;
+    }
+    .welcome-box button {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        padding: 5px;
     }
 }
