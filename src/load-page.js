@@ -62,6 +62,8 @@
 //     return content_parent;
 // }
 
+export default loadPage;
+
 function createHeader() {
     const header_parent = document.createElement('header');
     const logoContainer_parent = document.createElement('div');
@@ -76,25 +78,21 @@ function createHeader() {
     logoImg.alt = 'a mortar and pestle: the sweet relief logo';
 
     logoContainer_parent.append(logoName, logoImg);
-    nav_parent.append(
-        createLink('Our Remedies'),
-        createLink('About'),
-        createLink('Contact')
-    );
+    nav_parent.append(createLink('Our Remedies', 'remedies'), createLink('About', 'about'), createLink('Contact', 'contact'));
     header_parent.append(logoContainer_parent, nav_parent);
     return header_parent;
 }
 
-function createLink(text) {
+function createLink(text, id) {
     const link = document.createElement('button');
     link.innerText = text;
+    link.id = id;
     link.classList.add('nav-link');
     return link;
 }
 
-function createPage() {
+function loadPage() {
     const content_parent = document.getElementById('content');
     return content_parent.append(createHeader());
 }
 
-export default createPage;
