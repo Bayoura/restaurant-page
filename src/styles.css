@@ -45,7 +45,7 @@ body {
 
 #content {
     background-color: hsl(0deg 100% 100% / 60%);
-    width: 1200px;
+    width: 1000px;
     max-width: 85%;
 }
 
@@ -195,11 +195,11 @@ footer a {
     h1 {
         font-size: 3rem;
     }
-    .menu ul {
+    .menu {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .menu ul li {
+    .nav-link {
         font-size: 1.4rem;
     }
     h2 {
