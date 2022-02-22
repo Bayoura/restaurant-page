@@ -93,6 +93,7 @@ function createLink(text, id) {
 
 function loadPage() {
     const content_parent = document.getElementById('content');
-    return content_parent.append(createHeader());
+    const main = document.createElement('main');
+    return content_parent.append(createHeader(), main);
 }
 
