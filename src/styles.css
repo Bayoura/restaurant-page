@@ -52,6 +52,7 @@ body {
 /* -------------------NAVBAR--------------------- */
 
 .logo-container {
+    border-radius: 7px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -149,28 +150,19 @@ h2 {
     color: var(--green);
 }
 
-/* footer {
-    text-align: center;
-    font-weight: 300;
+/* ------------------------REMEDIES----------------------- */
+
+.item-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.attribution {
-    padding: 20px 0 10px 0;
-    font-size: 0.875rem;
+.remedy-image {
+    width: 200px;
 }
-
-
-.credit,
-.credit a {
-    font-size: 0.625rem; 
-    padding: 5px;
-}
-
-footer a {
-    font-style: italic;
-    font-weight: 400;
-    color: #cddef8;
-} */
 
 @media (max-width: 991px) {
     header {
