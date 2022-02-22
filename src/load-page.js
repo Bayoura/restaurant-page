@@ -11,7 +11,7 @@ function createHeader() {
     logoName.innerText = 'Sweet Relief';
     const logoImg = document.createElement('img');
     logoImg.src = '../src/images/sweet-relief-logo.png';
-    logoImg.alt = 'a mortar and pestle: the sweet relief logo';
+    logoImg.alt = 'mortar and pestle: the sweet relief logo';
 
     logoContainer_parent.append(logoName, logoImg);
     nav_parent.append(createLink('Our Remedies', 'remedies'), createLink('About', 'about'), createLink('Contact', 'contact'));
