@@ -22,21 +22,36 @@ function addMenuEvents() {
     const contact = document.getElementById('contact');
 
     logo.addEventListener('click', button => {
-        setCurrentClass(button.currentTarget);
-        if (button.currentTarget.classList.contains('current')) loadHomepage();
+        if (button.currentTarget.classList.contains('current')) {
+            return;
+        } else {
+            setCurrentClass(button.currentTarget);
+            loadHomepage();
+        }
     })
-
     remedies.addEventListener('click', button => {
-        setCurrentClass(button.target);
-        if (button.target.classList.contains('current')) loadRemedies();
+        if (button.target.classList.contains('current')) {
+            return;
+        } else {
+            setCurrentClass(button.target);
+            loadRemedies();
+        }
     });
     about.addEventListener('click', button => {
-        setCurrentClass(button.target);
-        if (button.target.classList.contains('current')) loadAbout();
+        if (button.target.classList.contains('current')) {
+            return;
+        } else {
+            setCurrentClass(button.target);
+            loadAbout();
+        }
     });
     contact.addEventListener('click', button => {
-        setCurrentClass(button.target);
-        if (button.target.classList.contains('current')) loadContact();
+        if (button.target.classList.contains('current')) {
+            return;
+        } else {
+            setCurrentClass(button.target);
+            loadContact();
+        }
     }); 
 }
 
