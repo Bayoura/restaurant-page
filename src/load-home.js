@@ -1,3 +1,4 @@
+import loadRemedies from "./load-remedies";
 export default loadHomepage;
 
 function loadHomepage() {
@@ -14,6 +15,11 @@ function createHomepage() {
     const button = document.createElement('button');
     button.innerText = 'Look at what we have to offer';
     button.type = 'button';
+    button.addEventListener('click', () => {
+        document.querySelector('.logo-container').classList.remove('current');
+        document.getElementById('remedies').classList.add('current');
+        loadRemedies();
+    });
     
     welcomeBox_parent.append(heading2, createParagraph('Whatever ailment plagues you, be assured, we got a cure. Our treatments range from medicinal teas over healing herbs and soothing ointments to magic potions.'), createParagraph('Whether you suffer from a headache, a flesh wound or food poisoning — we have the remedy to provide you with sweet relief.'), button);
     
