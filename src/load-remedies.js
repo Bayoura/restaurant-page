@@ -14,17 +14,17 @@ function createRemedyPage() {
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
 
-    const item1 = createRemedyItem('../src/images/assortment.jpg', 'green paste', 'span-two');
-    const item2 = createRemedyItem('../src/images/flasks.jpg', 'green paste');
-    const item3 = createRemedyItem('../src/images/mortar-pestle.jpg', 'green paste');
-    const item4 = createRemedyItem('../src/images/black-tea.jpg', 'green paste');
-    const item5 = createRemedyItem('../src/images/herbal-tea.jpg', 'green paste', 'span-two');
-    const item6 = createRemedyItem('../src/images/hanging-herbs.jpg', 'green paste');
-    const item7 = createRemedyItem('../src/images/green-paste.jpg', 'green paste', 'span-two');
-    const item8 = createRemedyItem('../src/images/red-tea.jpg', 'green paste');
-    const item9 = createRemedyItem('../src/images/tools.jpg', 'green paste');
-    const item10 = createRemedyItem('../src/images/spoons.jpg', 'green paste', 'span-two');
-    const item11 = createRemedyItem('../src/images/herbs-cup.jpg', 'green paste');
+    const item1 = createRemedyItem('../src/images/assortment.jpg', 'We offer a wide assortment of various remedies', 'various herbs and bottles', 'span-two');
+    const item2 = createRemedyItem('../src/images/flasks.jpg', 'The perfect ingredients for every cure', 'many flasks on a shelf');
+    const item3 = createRemedyItem('../src/images/mortar-pestle.jpg', 'Only natural ingredients', 'mortar and pestle');
+    const item4 = createRemedyItem('../src/images/black-tea.jpg', 'Aromatic black tea to stimulate your senses', 'black tea');
+    const item5 = createRemedyItem('../src/images/herbal-tea.jpg', 'Freshly gathered ingredients', 'a bag of herbs next to a cup', 'span-two');
+    const item6 = createRemedyItem('../src/images/hanging-herbs.jpg', 'A big supply of healing herbs', 'dried hanging herbs');
+    const item7 = createRemedyItem('../src/images/green-paste.jpg', 'Soothing ointments to treat your wounds', 'green paste in a mortar with pestle', 'span-two');
+    const item8 = createRemedyItem('../src/images/red-tea.jpg', 'Calming tea', 'red tea with herbs');
+    const item9 = createRemedyItem('../src/images/tools.jpg', 'Every remedy is carefully made by hand', 'tools and ingredients on a table');
+    const item10 = createRemedyItem('../src/images/spoons.jpg', 'A variety of nature\'s finest herbs', 'different herbs on spoons', 'span-two');
+    const item11 = createRemedyItem('../src/images/herbs-cup.jpg', 'The most potent remedies', 'herbs in a cup');
     
     itemContainer.append(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11);
     box_parent.append(itemContainer);
@@ -32,12 +32,12 @@ function createRemedyPage() {
     return box_parent;
 }
 
-function createRemedyItem(url, caption, optionalClass) {
+function createRemedyItem(url, caption, altText, optionalClass) {
     const figure = document.createElement('figure');
     const image = document.createElement('img');
     image.classList.add('remedy-image')
     image.src = url;
-    image.alt = caption;
+    image.alt = altText;
     const figureCaption = document.createElement('figcaption');
     figureCaption.innerText = caption;
 
