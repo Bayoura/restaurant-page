@@ -19,9 +19,8 @@
 
 :root {
     --green: hsl(103deg 13% 39%);
-    --green-80-transp: hsl(103deg 13% 39% / 80%);
-    --green-90-transp: hsl(103deg 13% 39% / 90%);
     --darkGreen: hsl(103deg 13% 28%);
+    --shadowGreen: hsl(103deg 13% 15%);
     --eggshell: hsl(23deg 87% 94%);
     --orange: hsl(23deg 68% 75%);
     --brown: hsl(23deg 27% 31%);
@@ -41,7 +40,7 @@ body {
 } 
 
 #content {
-    background-color: hsl(0deg 100% 100% / 60%);
+    background-color: hsl(0deg 100% 100% / 30%);
     width: 1000px;
     max-width: 85%;
 }
@@ -49,7 +48,6 @@ body {
 /* -------------------NAVBAR--------------------- */
 
 .logo-container {
-    border-radius: 7px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -109,9 +107,9 @@ header {
 /* ----------------------BOX-------------------- */
 
 .box {
-    background-color:var(--green-80-transp);
-    border: 6px solid var(--green-90-transp);
+    background-color:var(--green);
     border-radius: 5px;
+    box-shadow: 0 0 15px 10px  var(--shadowGreen);
     text-align: center;
     padding: 20px;
     max-width: 80%;
@@ -131,7 +129,7 @@ h2 {
 
 .box button {
     background-color: var(--orange);
-    border: none;
+    border: 1px solid var(--darkGreen);
     border-radius: 3px;
     color: var(--darkGreen);
     cursor: pointer;
@@ -174,6 +172,38 @@ figcaption {
     grid-row: span 2;
 }
 
+/* ----------------------------CONTACT----------------------- */
+
+form {
+    background-color: var(--darkGreen);
+    border: 1px solid var(--shadowGreen);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 25px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+input {
+    border-radius: 4px;
+    height: 2rem;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.address-container ul {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    list-style-position: inside;
+}
+
+/* --------------------------MEDIA QUERIES-------------------- */
+
 @media (max-width: 991px) {
     header {
         flex-direction: column;
@@ -184,7 +214,12 @@ figcaption {
     body {
         background-image: url(./images/background-img-mobile.jpg);
     }
+    #content {
+        width: 100%;
+        max-width: 100%;
+    }
     header {
+        width: 100%;
         padding: 15px 25px;
     }
     .logo-container {
