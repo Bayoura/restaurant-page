@@ -3,14 +3,12 @@ export default loadRemedies;
 function loadRemedies() {
     const main = document.querySelector('main');
     main.textContent = '';
-    return main.append(createRemedyPage());
+    return main.append(createRemedyPage()); 
 }
 
 function createRemedyPage() {
     const box_parent = document.createElement('div');
     box_parent.classList.add('box');
-    // const heading2 = document.createElement('h2');
-    // heading2.innerText = ''
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
 
