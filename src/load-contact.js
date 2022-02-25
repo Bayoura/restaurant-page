@@ -18,7 +18,7 @@ function createAddressBox() {
     const addressContainer = document.createElement('div');
     addressContainer.classList.add('address-container'); 
     const heading2 = document.createElement('h2');
-    heading2.innerText = 'Visit us';
+    heading2.innerText = 'Contact us';
     const address = document.createElement('p');
     address.innerText = 'Address: Cabin in the woods';
     const note = document.createElement('p');
@@ -40,20 +40,21 @@ function createAddressBox() {
 
 function createContactForm() {
     const contactContainer = document.createElement('div');
+    contactContainer.classList.add('contact-container');
     const contactForm = document.createElement('form'); 
     contactForm.onsubmit = 'return false';
-    const heading2 = document.createElement('h2');
-    heading2.innerText = 'Want us to prepare a custom treatment for you and deliver it to your doorstep?';
+    const heading3 = document.createElement('h3');
+    heading3.innerText = 'Want us to prepare a custom treatment for you and deliver it to your doorstep?';
     const service = document.createElement('p');
-    service.innerText = 'Also, feel free to contact us with any questions regarding our services. We\'re also happy to counsel you on any health or medicine related questions! Every serious request will receive an answer.';
-    const nameSection = createSection('text', 'fullName', 'Your full name', 'Mary Sue');
-    const mailSection = createSection('email', 'mail', 'Your e-mail address', 'realMail@realistic.com');
-    const addressSection = createSection ('text', 'address', 'Your address (only necessary for deliveries)', 'Real house in a real place');
+    service.innerText = 'Feel free to contact us with any questions regarding our services. We\'re also happy to counsel you on any health or medicine related questions! Every serious request will receive an answer.';
+    const nameSection = createSection('text', 'fullName', 'Your full name:', 'Mary Sue');
+    const mailSection = createSection('email', 'mail', 'Your e-mail address:', 'realMail@realistic.com');
+    const addressSection = createSection ('text', 'address', 'Your address (only necessary for deliveries):', 'Real house in a real place');
     
     const descriptionSection = document.createElement('section');
     const labelElement = document.createElement('label');
     labelElement.htmlFor = 'text-field';
-    labelElement.innerText = 'Please state your request. When describing ailments, please be as detailed as possible';
+    labelElement.innerText = 'Please state your request. When describing ailments, please be as detailed as possible:';
     const textAreaElement = document.createElement('textarea');
     textAreaElement.id = 'text-field';
     textAreaElement.placeholder = 'After eating some strange red berries I got nauseous and had to vomit multiple times. I also feel drowsy, and kind of hot and cold at the same time. I\'ve also experienced explosive diarrhea. Am I dying?? Please send help.';
@@ -65,7 +66,7 @@ function createContactForm() {
     submitButton.value = 'Send';
 
     contactForm.append(nameSection, mailSection, addressSection, descriptionSection, submitButton);
-    contactContainer.append(heading2, service, contactForm);
+    contactContainer.append(heading3, service, contactForm);
     return contactContainer;
 }
 
