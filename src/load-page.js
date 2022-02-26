@@ -1,5 +1,11 @@
 export default loadPage;
 
+function loadPage() {
+    const content_parent = document.getElementById('content');
+    const main = document.createElement('main');
+    return content_parent.append(createHeader(), main);
+}
+
 function createHeader() {
     const header_parent = document.createElement('header');
     const logoContainer_parent = document.createElement('div');
@@ -27,9 +33,4 @@ function createLink(text, id) {
     return link;
 }
 
-function loadPage() {
-    const content_parent = document.getElementById('content');
-    const main = document.createElement('main');
-    return content_parent.append(createHeader(), main);
-}
 

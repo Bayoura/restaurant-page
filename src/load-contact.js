@@ -21,15 +21,17 @@ function createAddressBox() {
     heading2.innerText = 'Contact us';
     const address = document.createElement('p');
     address.innerText = 'Address: Cabin in the woods';
+    address.classList.add('address-para');
     const note = document.createElement('p');
-    note.innerText = 'Read below for detailed directions:';
+    note.innerText = 'Detailed directions:';
+    note.classList.add('note-para');
 
     const list_parent = document.createElement('ul');
     const listItem1 = document.createElement('li');
     const listItem2 = document.createElement('li');
     const listItem3 = document.createElement('li');
     listItem1.innerText = 'Turn left at the third tree on your right';
-    listItem2.innerHTML = 'Walk towards the holly tree (do <strong>not</strong> eat the berries, though! They are poisonous! <em>(Rest assured, we always have the cure on hand, just in case.)</em>';
+    listItem2.innerHTML = 'Walk towards the holly tree (Do <strong>not</strong> eat the berries, though! They are poisonous! <em>(Rest assured, we always have the cure on hand, just in case.))</em>';
     listItem3.innerText = 'Follow the trail of violet starflowers, and you cannot miss us!';
 
     list_parent.append(listItem1, listItem2, listItem3);
@@ -51,21 +53,21 @@ function createContactForm() {
     const mailSection = createSection('email', 'mail', 'Your e-mail address:', 'realMail@realistic.com');
     const addressSection = createSection ('text', 'address', 'Your address (only necessary for deliveries):', 'Real house in a real place');
     
-    const descriptionSection = document.createElement('section');
+    const textAreaSection = document.createElement('section');
     const labelElement = document.createElement('label');
-    labelElement.htmlFor = 'text-field';
+    labelElement.htmlFor = 'text-area';
     labelElement.innerText = 'Please state your request. When describing ailments, please be as detailed as possible:';
     const textAreaElement = document.createElement('textarea');
-    textAreaElement.id = 'text-field';
-    textAreaElement.placeholder = 'After eating some strange red berries I got nauseous and had to vomit multiple times. I also feel drowsy, and kind of hot and cold at the same time. I\'ve also experienced explosive diarrhea. Am I dying?? Please send help.';
+    textAreaElement.id = 'text-area';
+    textAreaElement.placeholder = 'After eating some strange red berries, I got nauseous and had to vomit multiple times. I also feel drowsy, and kind of hot and cold at the same time. I\'ve also experienced explosive diarrhea. Am I dying?? Please send help.';
     textAreaElement.required = true;
-    descriptionSection.append(labelElement, textAreaElement);
+    textAreaSection.append(labelElement, textAreaElement);
 
     const submitButton = document.createElement('input');
     submitButton.type = 'submit';
     submitButton.value = 'Send';
 
-    contactForm.append(nameSection, mailSection, addressSection, descriptionSection, submitButton);
+    contactForm.append(nameSection, mailSection, addressSection, textAreaSection, submitButton);
     contactContainer.append(heading3, service, contactForm);
     return contactContainer;
 }
@@ -76,6 +78,7 @@ function createSection(type, id, labelText, placeholder) {
     labelElement.htmlFor = id;
     labelElement.innerText = labelText;
     const inputElement = document.createElement('input');
+    inputElement.classList.add('text-input');
     inputElement.id = id;
     inputElement.type = type;
     inputElement.placeholder = placeholder;
