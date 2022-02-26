@@ -3,7 +3,7 @@ export default loadPage;
 function loadPage() {
     const content_parent = document.getElementById('content');
     const main = document.createElement('main');
-    return content_parent.append(createHeader(), main);
+    return content_parent.append(createHeader(), main, createFooter());
 }
 
 function createHeader() {
@@ -31,6 +31,25 @@ function createLink(text, id) {
     link.id = id;
     link.classList.add('nav-link');
     return link;
+}
+
+function createFooter() {
+    const footerElement = document.createElement('footer');
+    const para1 = document.createElement('p');
+    const authorLink = document.createElement('a');
+    const odinLink = document.createElement('a');
+    para1.innerHTML = 'Programmed by ';
+    authorLink.innerText = 'Bayoura'
+    authorLink.href = 'https://github.com/Bayoura';
+    authorLink.target = '_blank';
+    odinLink.innerText = 'Odin Project Challenge';
+    odinLink.href = 'https://www.theodinproject.com';
+    odinLink.target = '_blank';
+
+    para1.append(authorLink);
+    footerElement.append(para1, odinLink);
+
+    return footerElement;
 }
 
 
