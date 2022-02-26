@@ -1,6 +1,6 @@
 # Apothecary Homepage
 
-![Screenshot](apothecary_screenshot.png)
+![Screenshot](/src/images/apothecary_screenshot.png)
 
 The inspiration for this website was an apothecary or healer's shop, like you find them in fantasy RPGs.
 
