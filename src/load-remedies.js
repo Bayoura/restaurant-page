@@ -9,6 +9,8 @@ function loadRemedies() {
 function createRemedyPage() {
     const box_parent = document.createElement('div');
     box_parent.classList.add('box');
+    const heading2 = document.createElement('h2');
+    heading2.innerText = 'Our Remedies';
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
 
@@ -25,7 +27,7 @@ function createRemedyPage() {
     const item11 = createRemedyItem('../src/images/herbs-cup.jpg', 'The most potent remedies', 'herbs in a cup');
     
     itemContainer.append(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11);
-    box_parent.append(itemContainer);
+    box_parent.append(heading2, itemContainer);
 
     return box_parent;
 }
