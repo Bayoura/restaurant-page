@@ -3,7 +3,7 @@ import loadPage from './load-page.js';
 import loadHomepage from './load-home.js';
 import loadRemedies from './load-remedies.js';
 import loadAbout from './load-about.js';
-import loadContact from './load-contact.js';
+import loadContact from './load-contact';
 
 loadInitialPage();
 

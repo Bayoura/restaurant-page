@@ -16,7 +16,7 @@ function createHeader() {
     const logoName = document.createElement('h1');
     logoName.innerText = 'Sweet Relief';
     const logoImg = document.createElement('img');
-    logoImg.src = '../src/images/sweet-relief-logo.png';
+    logoImg.src = 'images/sweet-relief-logo.png';
     logoImg.alt = 'mortar and pestle: the sweet relief logo';
 
     logoContainer_parent.append(logoName, logoImg);
